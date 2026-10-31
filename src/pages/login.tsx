@@ -22,7 +22,7 @@ export function SignIn2() {
                 <div className='mx-auto flex w-full flex-col justify-center space-y-2 py-8 sm:w-120 sm:p-8'>
                     <div className='mb-4 flex items-center justify-center'>
                         <Logo className='me-2' />
-                        <h1 className='text-xl font-medium'>Shadcn Admin</h1>
+                        <h1 className='text-xl font-medium'>Nkonta Admin</h1>
                     </div>
                 </div>
                 <div className='mx-auto flex w-full max-w-sm flex-col justify-center space-y-2'>
@@ -30,14 +30,7 @@ export function SignIn2() {
                         <h2 className='text-lg font-semibold tracking-tight'>Sign in</h2>
                         <p className='text-sm text-muted-foreground'>
                             Enter your email and password below to log into{' '}
-                            <br className='max-sm:hidden' /> your account. Don't have an
-                            account?{' '}
-                            <Link
-                                to='/sign-up'
-                                className='text-nowrap underline underline-offset-4 hover:text-primary'
-                            >
-                                Sign Up
-                            </Link>
+                            <br className='max-sm:hidden' /> your account.
                         </p>
                     </div>
                     <UserAuthForm />
@@ -185,13 +178,14 @@ function UserAuthForm({
                         {form.formState.errors.password?.message}
                     </FieldError>
 
-                    <Link
-                        to="/forgot-password"
-                        className="absolute inset-e-0 -top-0.5 text-sm font-medium text-muted-foreground hover:opacity-75"
-                    >
-                        Forgot password?
-                    </Link>
                 </Field>
+
+                <Link
+                    to="/forgot-password"
+                    className=" inset-e-0 -top-0.5 text-sm font-medium text-muted-foreground hover:opacity-75"
+                >
+                    Forgot password?
+                </Link>
             </FieldGroup>
 
             <Button className="mt-2" disabled={isLoading}>
