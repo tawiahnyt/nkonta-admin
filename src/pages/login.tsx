@@ -170,7 +170,7 @@ function UserAuthForm({
                     <Input
                         type='password'
                         id="password"
-                        placeholder="********"
+                        placeholder="Password"
                         {...form.register("password")}
                     />
 
