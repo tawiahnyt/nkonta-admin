@@ -34,7 +34,7 @@ export function SignIn2() {
                         </p>
                     </div>
                     <UserAuthForm />
-                    <p className='px-8 text-center text-sm text-muted-foreground'>
+                    {/* <p className='px-8 text-center text-sm text-muted-foreground'>
                         By clicking sign in, you agree to our{' '}
                         <a
                             href='/terms'
@@ -50,7 +50,7 @@ export function SignIn2() {
                             Privacy Policy
                         </a>
                         .
-                    </p>
+                    </p> */}
                 </div>
             </div>
 
@@ -165,7 +165,15 @@ function UserAuthForm({
                 </Field>
 
                 <Field className="relative">
-                    <FieldLabel htmlFor="password">Password</FieldLabel>
+                    <div>
+                        <FieldLabel htmlFor="password">Password</FieldLabel>
+                        <Link
+                            to='/forgot-password'
+                            className='absolute inset-e-0 -top-0.5 text-sm font-medium text-muted-foreground hover:opacity-75'
+                        >
+                            Forgot password?
+                        </Link>
+                    </div>
 
                     <Input
                         type='password'
@@ -179,13 +187,6 @@ function UserAuthForm({
                     </FieldError>
 
                 </Field>
-
-                <Link
-                    to="/forgot-password"
-                    className=" inset-e-0 -top-0.5 text-sm font-medium text-muted-foreground hover:opacity-75"
-                >
-                    Forgot password?
-                </Link>
             </FieldGroup>
 
             <Button className="mt-2" disabled={isLoading}>
@@ -197,7 +198,7 @@ function UserAuthForm({
                 Sign in
             </Button>
 
-            <div className="relative my-2">
+            {/* <div className="relative my-2">
                 <div className="absolute inset-0 flex items-center">
                     <span className="w-full border-t" />
                 </div>
@@ -207,7 +208,7 @@ function UserAuthForm({
                         Or continue with
                     </span>
                 </div>
-            </div>
+            </div> */}
         </form>
     )
 }
